@@ -42,4 +42,4 @@ def update_figure(selected_year):
 
 
 if __name__ == '__main__':
-    dash_app.run_server(debug=True)
+    dash_app.run_server(debug=True, port = 8000)
