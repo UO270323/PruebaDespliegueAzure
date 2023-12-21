@@ -1,7 +1,7 @@
 import dash
-import dash_core_components as dcc
+from dash import dcc
 import dash_bootstrap_components as dbc  # pip install dash-bootstrap-components
-import dash_html_components as html
+from dash import html
 from dash.dependencies import Input, Output
 import plotly.express as px
 
@@ -10,7 +10,7 @@ import pandas as pd
 df = pd.read_csv('assets/data/gapminderDataFiveYear.csv')
 
 dash_app = dash.Dash(__name__, external_stylesheets=[dbc.themes.DARKLY])
-app = dash_app.server
+application = dash_app.server
 
 dash_app.layout = html.Div([
     dcc.Graph(id='graph-with-slider'),
